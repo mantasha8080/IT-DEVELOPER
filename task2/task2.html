@@ -1,0 +1,498 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Portfolio
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #1a1a1a;
+            animation: fadeIn 1s ease-in-out;
+        }
+        header img {
+            width: 50px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ff9800;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .contact-btn {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-btn:hover {
+            background-color: #e68900;
+        }
+        .intro {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            animation: slideInLeft 1s ease-in-out;
+        }
+        .intro img {
+            width: 300px;
+            margin-right: 50px;
+            border-radius: 50%;
+            animation: bounceIn 1s ease-in-out;
+        }
+        .intro-text {
+            max-width: 600px;
+        }
+        .intro-text h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .intro-text p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .intro-text .contact-btn {
+            margin-top: 20px;
+        }
+        .section {
+            padding: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .section .download-btn {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .section .download-btn:hover {
+            background-color: #e68900;
+        }
+        .services {
+            display: flex;
+            justify-content: space-between;
+        }
+        .service {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 30%;
+            transition: transform 0.3s;
+        }
+        .service:hover {
+            transform: translateY(-10px);
+        }
+        .service i {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .project {
+            width: 48%;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .project img:hover {
+            transform: scale(1.05);
+        }
+        .project h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .project p {
+            font-size: 18px;
+        }
+        .project .read-more {
+            color: #ff9800;
+            text-decoration: none;
+            position: relative;
+        }
+        .project .read-more::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ff9800;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        .project .read-more:hover::after {
+            width: 100%;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding: 50px;
+            background-color: #333;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .stat {
+            width: 23%;
+        }
+        .stat h3 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .stat p {
+            font-size: 18px;
+        }
+        .testimonial {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            animation: slideInRight 1s ease-in-out;
+        }
+        .testimonial img {
+            width: 200px;
+            border-radius: 10px;
+            margin-right: 50px;
+        }
+        .testimonial-text {
+            max-width: 600px;
+        }
+        .testimonial-text p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .testimonial-text h4 {
+            font-size: 24px;
+            margin: 0;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #1a1a1a;
+            animation: fadeIn 1s ease-in-out;
+        }
+        footer img {
+            width: 50px;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #ff9800;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounceIn {
+            from, 20%, 40%, 60%, 80%, to {
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+            0% {
+                opacity: 0;
+                transform: scale3d(0.3, 0.3, 0.3);
+            }
+            20% {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+            40% {
+                transform: scale3d(0.9, 0.9, 0.9);
+            }
+            60% {
+                opacity: 1;
+                transform: scale3d(1.03, 1.03, 1.03);
+            }
+            80% {
+                transform: scale3d(0.97, 0.97, 0.97);
+            }
+            to {
+                opacity: 1;
+                transform: scale3d(1, 1, 1);
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <img alt="Logo" height="50" src="https://storage.googleapis.com/a1aa/image/wmoSA6meKgSTOCpFTo7JyP6TJkuTAjd5nQc5UfmZPyfAhfiOB.jpg" width="50"/>
+   <nav>
+    <a href="#">
+     Home
+    </a>
+    <a href="#">
+     Portfolio
+    </a>
+    <a href="#">
+     Contact
+    </a>
+   </nav>
+   <button class="contact-btn">
+    Contact Us
+   </button>
+  </header>
+  <section class="intro">
+   <img alt="Profile Image" height="300" src="https://storage.googleapis.com/a1aa/image/uxlwvKEujOYTCBYR5TFGkRb5rAtovqiwVePUJix06RFO8X0JA.jpg" width="300"/>
+   <div class="intro-text">
+    <h1>
+     Hello
+     <br/>
+     I'm Mantasha Afroz
+    </h1>
+    <p>
+     As a technology enthusiast and a passionate designer, I create visually appealing and functional designs, with a keen eye for detail and a collaborative spirit to create exceptional projects.
+    </p>
+    <button class="contact-btn">
+     Contact Us
+    </button>
+   </div>
+  </section>
+  <section class="section">
+   <h2>
+    Why Hire Me For the Next Project?
+   </h2>
+   <p>
+    The technological revolution is changing all aspects of our lives, and the fabric of society itself. It's also changing the way we learn and what we learn. Faster, knowledge is less prized than everything you ever need to know can be found on your phone. There's no incentive to be an expert at doing everything when you can download an app for it.
+   </p>
+   <button class="download-btn">
+    Download CV
+   </button>
+   <div class="services">
+    <div class="service">
+     <i class="fas fa-laptop-code">
+     </i>
+     <h3>
+      Product Design
+     </h3>
+     <p>
+      The technological revolution is changing aspect
+     </p>
+    </div>
+    <div class="service">
+     <i class="fas fa-paint-brush">
+     </i>
+     <h3>
+      Product Design
+     </h3>
+     <p>
+      The technological revolution is changing aspect
+     </p>
+    </div>
+    <div class="service">
+     <i class="fas fa-mobile-alt">
+     </i>
+     <h3>
+      Product Design
+     </h3>
+     <p>
+      The technological revolution is changing aspect
+     </p>
+    </div>
+   </div>
+  </section>
+  <section class="section projects">
+   <div class="project">
+    <h3>
+     Project 1
+    </h3>
+    <h2>
+     Branding Nice Studio
+    </h2>
+    <p>
+     The technological revolution is changing aspect of our lives, and the fabric of society itself. It's also changing the way we learn and what we learn. Faster, knowledge is less prized than everything you ever need to know can be found on your phone. There's no incentive to be an expert at doing everything when you can.
+    </p>
+    <a class="read-more" href="#">
+     Read More
+    </a>
+    <img alt="Branding Nice Studio" height="400" src="https://storage.googleapis.com/a1aa/image/FyhTDrzTssbdJJlXLrgdR9Pn4dIx9mrmxdd7Ms0cRyuI8L6E.jpg" width="600"/>
+   </div>
+   <div class="project">
+    <h3>
+     Project 2
+    </h3>
+    <h2>
+     Mobile Card App
+    </h2>
+    <p>
+     The technological revolution is changing aspect of our lives, and the fabric of society itself. It's also changing the way we learn and what we learn. Faster, knowledge is less prized than everything you ever need to know can be found on your phone. There's no incentive to be an expert at doing everything when you can.
+    </p>
+    <a class="read-more" href="#">
+     Read More
+    </a>
+    <img alt="Mobile Card App" height="400" src="https://storage.googleapis.com/a1aa/image/tUKempPKPrzfeJXrfJZ31eOu9Spma872PLdZQh8G2QmiEeL6E.jpg" width="600"/>
+   </div>
+   <div class="project">
+    <h3>
+     Project 3
+    </h3>
+    <h2>
+     Restaurant Landing Page
+    </h2>
+    <p>
+     The technological revolution is changing aspect of our lives, and the fabric of society itself. It's also changing the way we learn and what we learn. Faster, knowledge is less prized than everything you ever need to know can be found on your phone. There's no incentive to be an expert at doing everything when you can.
+    </p>
+    <a class="read-more" href="#">
+     Read More
+    </a>
+    <img alt="Restaurant Landing Page" height="400" src="https://storage.googleapis.com/a1aa/image/nVfc8tIEdegOI0jN0FfeSldvJe5mYMF4BK7dHcXCS2eaJ8L6E.jpg" width="600"/>
+   </div>
+  </section>
+  <section class="section stats">
+   <div class="stat">
+    <h3>
+     0
+    </h3>
+    <p>
+     Happy Clients
+    </p>
+   </div>
+   <div class="stat">
+    <h3>
+     0
+    </h3>
+    <p>
+     Projects Done
+    </p>
+   </div>
+   <div class="stat">
+    <h3>
+     0
+    </h3>
+    <p>
+     Awards Winning
+    </p>
+   </div>
+   <div class="stat">
+    <h3>
+     0
+    </h3>
+    <p>
+     Years Experience
+    </p>
+   </div>
+  </section>
+  <section class="section testimonial">
+   <img alt="Testimonial Image" height="200" src="https://storage.googleapis.com/a1aa/image/wgkfON7XqQRGPSPcExCWUPwlGtgBckZrRb6lgKf7o3vowvoTA.jpg" width="200"/>
+   <div class="testimonial-text">
+    <p>
+     The quick brown fox jumps over the lazy dog. It looks like a charm in my case, pretty. Just a little quick brown fox for example. What's bad my friend, for a quick flip you.
+    </p>
+    <h4>
+     Hammad
+    </h4>
+    <p>
+     CEO of Signma
+    </p>
+   </div>
+  </section>
+  <footer>
+   <img alt="Logo" height="50" src="https://storage.googleapis.com/a1aa/image/wmoSA6meKgSTOCpFTo7JyP6TJkuTAjd5nQc5UfmZPyfAhfiOB.jpg" width="50"/>
+   <p>
+    © 2023 Portfolio - Created with passion by Mantasha Afroz
+   </p>
+   <div class="social-icons">
+    <a href="#">
+     <i class="fab fa-linkedin">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-behance">
+     </i>
+    </a>
+   </div>
+  </footer>
+ </body>
+</html>
