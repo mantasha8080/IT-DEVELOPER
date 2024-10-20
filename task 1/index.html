@@ -1,0 +1,236 @@
+<html>
+ <head>
+  <title>
+   Landwind
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333333;
+            font-weight: 500;
+        }
+        .navbar .nav-links a:hover {
+            color: #007bff;
+        }
+        .navbar .nav-links .btn {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .navbar .nav-links .btn:hover {
+            background-color: #0056b3;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+        .hero .text {
+            max-width: 50%;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero .text h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0;
+        }
+        .hero .text p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .hero .text .btn-group {
+            display: flex;
+            align-items: center;
+        }
+        .hero .text .btn-group a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+        }
+        .hero .text .btn-group a i {
+            margin-right: 5px;
+        }
+        .hero .image img {
+            width: 500px;
+            height: auto;
+        }
+        .partners {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f8f9fa;
+        }
+        .partners img {
+            width: 100px;
+            height: auto;
+            margin: 0 20px;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        section {
+            padding: 50px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="navbar">
+   <div class="logo">
+    <img alt="Company Logo" height="30" src="https://storage.googleapis.com/a1aa/image/EseFMeXf1POnyIzHkIYBeonNVWPUOwn2cJLPA21eSsf00CL6E.jpg" width="30"/>
+    <span>
+     Landwind
+    </span>
+   </div>
+   <div class="nav-links">
+    <a href="#home">
+     Home
+    </a>
+    <a href="#company">
+     Company
+    </a>
+    <a href="#marketplace">
+     Marketplace
+    </a>
+    <a href="#features">
+     Features
+    </a>
+    <a href="#team">
+     Team
+    </a>
+    <a href="#contact">
+     Contact
+    </a>
+    <a class="btn" href="#">
+     Download
+    </a>
+   </div>
+  </div>
+  <div id="home" class="hero">
+   <div class="text">
+    <h1>
+     Building digital products &amp; brands.
+    </h1>
+    <p>
+     This free and open-source landing page template was built using the utility classes from Tailwind CSS and based on the components from the Flowbite Library and the Blocks System.
+    </p>
+    <div class="btn-group">
+     <a href="#">
+      <i class="fab fa-github">
+      </i>
+      View on GitHub
+     </a>
+     <a href="#">
+      <i class="fas fa-file-download">
+      </i>
+      Get Figma File
+     </a>
+    </div>
+   </div>
+   <div class="image">
+    <img alt="Illustration of digital products and brands" height="400" src="https://storage.googleapis.com/a1aa/image/xItjO8MwyiYfQ6ze7X9CkhrdyT1f1QXOZK1tNjADCx0kWYRnA.jpg" width="500"/>
+   </div>
+  </div>
+  <div class="partners">
+   <img alt="Airbnb Logo" height="50" src="https://storage.googleapis.com/a1aa/image/wJaYnqwVB8ZKM9NA1GFgAWPK9TqQOBP1flhxqptjVu1oFW0JA.jpg" width="100"/>
+   <img alt="Google Logo" height="50" src="https://storage.googleapis.com/a1aa/image/jfBkEKDGZjRcPCZfyWeAZZVeV9RPSkV8Vw6WpO4CrsdUtwiOB.jpg" width="100"/>
+   <img alt="Microsoft Logo" height="50" src="https://storage.googleapis.com/a1aa/image/Qe7cB0yvlOQOcyI2dIPRo1B5tZmy2mq25V8R2Qh3teuLLsoTA.jpg" width="100"/>
+   <img alt="Spotify Logo" height="50" src="https://storage.googleapis.com/a1aa/image/6cpWu3kaUi4dKZ6mKtoAQfUeNHhxecahZyRIiUQ7vMxcWYRnA.jpg" width="100"/>
+   <img alt="Slack Logo" height="50" src="https://storage.googleapis.com/a1aa/image/UltN5oVbUspBKVdTLLCNR6KLVye2VDQqEFUtfTzI6TSMLsoTA.jpg" width="100"/>
+   <img alt="Mashable Logo" height="50" src="https://storage.googleapis.com/a1aa/image/3S9xeWxeaShBbEMN9n2mehoCY4mEuffj9FDOKQdTWAf7zCL6E.jpg" width="100"/>
+  </div>
+  <section id="company">
+   <h2>
+    Company
+   </h2>
+   <p>
+    Our company is dedicated to building digital products and brands that make a difference. We leverage the latest technologies and design principles to create solutions that are not only functional but also aesthetically pleasing.
+   </p>
+  </section>
+  <section id="marketplace">
+   <h2>
+    Marketplace
+   </h2>
+   <p>
+    Explore our marketplace to find a variety of digital products and services that can help you achieve your business goals. From software solutions to design assets, we have everything you need to succeed in the digital world.
+   </p>
+  </section>
+  <section id="features">
+   <h2>
+    Features
+   </h2>
+   <p>
+    Our products come packed with features that are designed to provide you with the best possible experience. Whether you're looking for advanced functionality or simple usability, our features are tailored to meet your needs.
+   </p>
+  </section>
+  <section id="team">
+   <h2>
+    Team
+   </h2>
+   <p>
+    Meet our team of experts who are passionate about building digital products and brands. Our team members come from diverse backgrounds and bring a wealth of knowledge and experience to the table.
+   </p>
+  </section>
+  <section id="contact">
+   <h2>
+    Contact
+   </h2>
+   <p>
+    Get in touch with us to learn more about our products and services. We're here to help you with any questions or concerns you may have. Reach out to us via email, phone, or our contact form.
+   </p>
+  </section>
+ </body>
+</html>
